@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="onairm.com.tvplayer.PlayerDemoActivity"
+
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/flPlayerContainer"
+        android:layout_width="480px"
+        android:layout_height="270px"
+        android:layout_marginLeft="33px"
+        android:layout_marginTop="73px"
+        android:focusable="true"
+        android:background="@drawable/recomend_selector" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="直接全屏播放"
+
+        android:layout_marginTop="100dp"
+        />
+
+</LinearLayout>
