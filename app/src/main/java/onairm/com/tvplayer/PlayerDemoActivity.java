@@ -10,14 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import com.onairm.tvbaselibrary.activity.SimpleFSActivity;
+import com.onairm.tvbaselibrary.player.AbstractTvPlayerView;
+import com.onairm.tvbaselibrary.player.LoadingNewPlayerView;
+import com.onairm.tvbaselibrary.player.PlayerFactory;
+import com.onairm.tvbaselibrary.player.SimpleFSActivity;
 import com.onairm.tvbaselibrary.utils.PlayerBean;
 import com.onairm.tvbaselibrary.utils.SinglePlayerUtil;
-import com.onairm.tvbaselibrary.view.FullScreenPlayer;
 
 public class PlayerDemoActivity extends AppCompatActivity {
 
-    private FullScreenPlayer fullScreenPlayer;
+    private AbstractTvPlayerView fullScreenPlayer;
     private FrameLayout flPlayerContainer;
     private Button btnPlay;
 
@@ -37,7 +39,7 @@ public class PlayerDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SimpleFSActivity.jumpToLiveActivity(PlayerDemoActivity.this,
-                        FullScreenPlayer.NEW_PLAYER,
+                        AbstractTvPlayerView.NEW_PLAYER,
                         path2,
                         "直接全屏播放", 0);
             }
@@ -58,13 +60,11 @@ public class PlayerDemoActivity extends AppCompatActivity {
 
     }
     private void initPlayer() {
-        fullScreenPlayer = new FullScreenPlayer(PlayerDemoActivity.this,
-                FullScreenPlayer.NEW_PLAYER
-        );
-        fullScreenPlayer.setPlayCompleteListener(new FullScreenPlayer.PlayerComplete() {
+        fullScreenPlayer = PlayerFactory.getInstance().newInstance(LoadingNewPlayerView.class,this);
+
+        fullScreenPlayer.setPlayCompleteListener(new AbstractTvPlayerView.PlayerComplete() {
             @Override
             public void playComplete() {
-                Log.e("playComplete", "playComplete");
 
             }
         });
@@ -77,7 +77,7 @@ public class PlayerDemoActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                     SimpleFSActivity.jumpToLiveActivity(PlayerDemoActivity.this,
-                            FullScreenPlayer.NO_NEW_PLAYER,
+                            AbstractTvPlayerView.NO_NEW_PLAYER,
                             path,
                             "小窗进全屏"
                             , PlayerDemoActivity.this.hashCode());
