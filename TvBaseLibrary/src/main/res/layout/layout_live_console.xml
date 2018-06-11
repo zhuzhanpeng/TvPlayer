@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <com.onairm.tvbaselibrary.player.MySeekBar
+        android:id="@+id/progressSeekView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-66dp"
+        android:focusable="true"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+        style="@style/ProgressBar_Mini"
+        android:thumb="@mipmap/progress_thumb"
+        />
+
+    <ImageView
+        android:id="@+id/btnPause"
+        android:layout_width="@dimen/w_70"
+        android:layout_height="@dimen/w_70"
+        android:layout_marginLeft="@dimen/w_70"
+        android:focusable="true"
+        android:src="@drawable/play_selector"
+        android:layout_gravity="center_vertical"
+        />
+
+    <ImageView
+        android:id="@+id/btnSwitchChapter"
+        android:layout_width="@dimen/w_100"
+        android:layout_height="@dimen/w_100"
+        android:layout_marginLeft="@dimen/w_199"
+        android:focusable="true"
+        android:layout_gravity="center_vertical"
+         />
+    android:src="@drawable/chapter_selector"
+    <TextView
+        android:id="@+id/tvVideoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxEms="13"
+        android:textColor="#fff"
+        android:textSize="@dimen/w_48"
+        />
+
+</merge>

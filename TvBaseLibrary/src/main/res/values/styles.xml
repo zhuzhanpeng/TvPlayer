@@ -1,0 +1,21 @@
+<resources>
+
+
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">3dip</item>
+        <item name="android:minHeight">3dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progress_selector</item>
+    </style>
+    <style name="style_player_console_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/live_console_selector</item>
+        <item name="android:focusable">true</item>
+    </style>
+</resources>

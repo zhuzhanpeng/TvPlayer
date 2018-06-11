@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onairm.tvbaselibrary">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application>
+        <activity android:name=".activity.FirstVideoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".player.SimpleFSActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+    </application>
+
+</manifest>

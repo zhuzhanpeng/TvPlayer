@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <clip>
+            <bitmap android:src="@drawable/progressbar_focus"/>
+        </clip>
+    </item>
+    <item >
+        <clip>
+            <!--<bitmap android:src="@drawable/progressbar"/>-->
+            <bitmap android:src="@drawable/progressbar"/>
+        </clip>
+    </item>
+
+</selector>
